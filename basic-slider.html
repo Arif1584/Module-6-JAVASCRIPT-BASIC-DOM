@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic image slider | js</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 100%;
+            position: relative;
+        }
+        .box img{
+            width: 100%;
+            height: inherit;
+        }
+
+        .box .btns{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 5%;
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        .box .btns .btn{
+            height: 10px;
+            width: 60px;
+            border-radius: 25px;
+            margin-inline: 20px;
+            background: darkslategray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="https://images.hdqwalls.com/wallpapers/mitre-peak-in-the-evening-light-4k-eb.jpg" alt="" id="simg">
+
+        <div class="btns">
+            <div class="btn bt1" onclick="bt1()"></div>
+            <div class="btn bt2" onclick="bt2()"></div>
+            <div class="btn bt3" onclick="bt3()"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function bt1(){
+            var simg = document.querySelector("#simg").src = "https://images.hdqwalls.com/wallpapers/snow-peak-mountains-5k-cw.jpg"
+        }
+        function bt2(){
+            var simg = document.querySelector("#simg").src = "https://images.hdqwalls.com/wallpapers/aerial-view-dolomites-4k-qg.jpg"
+        }
+        function bt3(){
+            var simg = document.querySelector("#simg").src = "https://images.hdqwalls.com/wallpapers/forests-trees-swamp-rays-of-light-ob.jpg"
+        }
+
+        setInterval(bt1,2000);
+        setInterval(bt2,4000);
+        setInterval(bt3,6000);
+
+    </script>
+
+</body>
+</html>
